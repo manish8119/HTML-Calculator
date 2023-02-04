@@ -1,0 +1,80 @@
+<!DOCDTYPE html>
+	<html>
+
+		<head>
+			<title>simple calculator</title>
+			<style>
+			body {
+				background: lightskyblue;
+			}
+
+			* {
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+			}
+
+			.wrap {
+				width: fit-content;
+				display: block;
+				height: 50%;
+				margin: auto;
+				background-color: black;
+				padding: 15px;
+			}
+
+			input[type=text] {
+				width: fit-content;
+				margin: auto;
+				display: block;
+				padding: 10px;
+				font-size: 22px;
+				font-weight: bold;
+				border-radius: 5px;
+			}
+
+			input[type=button],
+			input[type=reset],
+			input[type=button]#del {
+				width: 25%;
+				margin: auto;
+				display:block;
+				float: left;
+				padding: 10px;
+				font-size: 22px;
+				font-weight: bold;
+				border-radius: 5px;
+			}
+		</style>
+		</head>
+
+		<body bgcolor="black">
+			<form name="calculator" class="wrap">
+				<input type="text" name="ans" value="">
+				<input type="button" value="1" onclick="document.calculator.ans.value+='1'">
+				<input type="button" value="2" onclick="document.calculator.ans.value+='2'">
+				<input type="button" value="3" onclick="document.calculator.ans.value+='3'">
+				<input type="button" value="+" onclick="document.calculator.ans.value+='+'">
+				<input type="button" value="4" onclick="document.calculator.ans.value+='4'">
+				<input type="button" value="5" onclick="document.calculator.ans.value+='5'">
+				<input type="button" value="6" onclick="document.calculator.ans.value+='6'">
+				<input type="button" value="-" onclick="document.calculator.ans.value+='-'">
+				<input type="button" value="7" onclick="document.calculator.ans.value+='7'">
+				<input type="button" value="8" onclick="document.calculator.ans.value+='8'">
+				<input type="button" value="9" onclick="document.calculator.ans.value+='9'">
+				<input type="button" value="/" onclick="document.calculator.ans.value+='/'">
+				<input type="button" value="0" onclick="document.calculator.ans.value+='0'">
+				<!-- <input type="button" value="" onclick="document.calculator.ans.value+='%'"> -->
+				<input type="button" value="DEL"
+					onclick="document.calculator.ans.value=calculator.ans.value.substr(0,
+					calculator.ans.value.length-1)"
+					id="del">
+				<input type="button" value="="
+					onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+				<input type="button" value=" *"
+					onclick="document.calculator.ans.value+='*'">
+				<input type="reset" value="AC">
+			</form>
+		</body>
+
+	</html>
